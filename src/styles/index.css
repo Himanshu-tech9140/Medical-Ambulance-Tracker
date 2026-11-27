@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  color: #172b4d;
+  background: #f5f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(16, 140, 224, 0.28);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #123f68;
+  background: #dceeff;
+}
+
+.font-display {
+  font-family: "Manrope", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 650ms ease-out both;
+}
+
+.animate-rise-in-delay {
+  animation: rise-in 750ms 120ms ease-out both;
+}
+
+.animate-soft-float {
+  animation: soft-float 5s ease-in-out infinite;
+}
+
+.contact-field {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #dce5ef;
+  border-radius: 12px;
+  background: #fff;
+  padding: 11px 13px;
+  color: #172b4d;
+  font-size: 13px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.contact-field::placeholder {
+  color: #91a0b4;
+}
+
+.contact-field:focus {
+  border-color: #108ce0;
+  box-shadow: 0 0 0 3px rgba(16, 140, 224, 0.12);
+  outline: none;
+}
+
+.hero-road-motion {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 42px,
+    rgba(255, 255, 255, 0.72) 42px,
+    rgba(255, 255, 255, 0.72) 64px,
+    transparent 64px,
+    transparent 102px
+  );
+  background-position: 0 80%;
+  background-repeat: repeat-x;
+  background-size: 180px 3px;
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  animation: road-drift 1.8s linear infinite;
+}
+
+.hero-light {
+  display: block;
+  width: 22px;
+  height: 7px;
+  border-radius: 999px;
+}
+
+.hero-light-red {
+  background: #fb4f57;
+  box-shadow: 0 0 16px 3px rgba(251, 79, 87, 0.62);
+  animation: light-flash 1s ease-in-out infinite alternate;
+}
+
+.hero-light-blue {
+  background: #54b8ff;
+  box-shadow: 0 0 16px 3px rgba(84, 184, 255, 0.62);
+  animation: light-flash 1s 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes road-drift {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -180px;
+  }
+}
+
+@keyframes light-flash {
+  from {
+    opacity: 0.35;
+    transform: scaleX(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1.05);
+  }
+}
+
+.leaflet-container {
+  color: #172b4d;
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.jeevansetu-map-icon {
+  border: 0;
+  background: transparent;
+}
+
+.jeevansetu-map-pin {
+  position: relative;
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 5px 16px rgba(23, 43, 77, 0.3);
+}
+
+.jeevansetu-map-pin--pickup {
+  background: #10b981;
+}
+
+.jeevansetu-map-pin--ambulance {
+  background: #086fbe;
+}
+
+.jeevansetu-map-pin--ambulance::after {
+  position: absolute;
+  inset: -7px;
+  border: 2px solid rgba(8, 111, 190, 0.3);
+  border-radius: 50%;
+  content: "";
+  animation: map-pulse 1.8s ease-out infinite;
+}
+
+.jeevansetu-map-pin--hospital {
+  background: #e5484d;
+}
+
+.jeevansetu-admin-map-icon {
+  border: 0;
+  background: transparent;
+}
+
+.jeevansetu-admin-map-pin {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #086fbe;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 5px 16px rgba(23, 43, 77, 0.3);
+}
+
+@keyframes map-pulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.82);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

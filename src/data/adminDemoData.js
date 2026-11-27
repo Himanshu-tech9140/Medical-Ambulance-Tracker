@@ -1,0 +1,141 @@
+export const ADMIN_REQUESTS = [
+  {
+    id: "MT-26-1842",
+    student: "Jordan Lee",
+    emergency: "Cardiac event",
+    location: "North Campus · Science Hall",
+    priority: "Critical",
+    received: "2 min ago",
+    status: "Pending",
+    ambulance: "Unassigned",
+  },
+  {
+    id: "MT-26-1841",
+    student: "Mia Chen",
+    emergency: "Road accident",
+    location: "King St W · Gate 3",
+    priority: "Critical",
+    received: "6 min ago",
+    status: "En route",
+    ambulance: "MT-AMB-05",
+  },
+  {
+    id: "MT-26-1840",
+    student: "Noah Patel",
+    emergency: "Breathing problem",
+    location: "Residence Hall · East",
+    priority: "High",
+    received: "11 min ago",
+    status: "Assigned",
+    ambulance: "MT-AMB-02",
+  },
+  {
+    id: "MT-26-1839",
+    student: "Sofia Martin",
+    emergency: "Sports injury",
+    location: "Athletics Field",
+    priority: "Medium",
+    received: "18 min ago",
+    status: "Completed",
+    ambulance: "MT-AMB-08",
+  },
+  {
+    id: "MT-26-1838",
+    student: "Ethan Brooks",
+    emergency: "Severe allergic reaction",
+    location: "Student Centre · Lobby",
+    priority: "Critical",
+    received: "24 min ago",
+    status: "En route",
+    ambulance: "MT-AMB-11",
+  },
+  {
+    id: "MT-26-1837",
+    student: "Amara Wilson",
+    emergency: "Fall with injury",
+    location: "Library · South Entrance",
+    priority: "High",
+    received: "32 min ago",
+    status: "Completed",
+    ambulance: "MT-AMB-03",
+  },
+  {
+    id: "MT-26-1836",
+    student: "Liam Garcia",
+    emergency: "Minor injury",
+    location: "Engineering Block",
+    priority: "Low",
+    received: "41 min ago",
+    status: "Pending",
+    ambulance: "Unassigned",
+  },
+];
+
+export const ADMIN_AMBULANCES = [
+  { id: "MT-AMB-01", driver: "Daniel Ross", assignedDriverId: "DRV-001", vehicleModel: "Ford Transit 350", status: "Available", area: "North Campus", eta: "—" },
+  { id: "MT-AMB-02", driver: "Priya Shah", assignedDriverId: "DRV-002", vehicleModel: "Mercedes Sprinter", status: "On call", area: "Residence Hall", eta: "5 min" },
+  { id: "MT-AMB-03", driver: "Oliver King", assignedDriverId: "DRV-003", vehicleModel: "Ford Transit 350", status: "Available", area: "West Gate", eta: "—" },
+  { id: "MT-AMB-04", driver: "Ella Morris", assignedDriverId: "DRV-008", vehicleModel: "Ram ProMaster", status: "Available", area: "South Campus", eta: "—" },
+  { id: "MT-AMB-05", driver: "Marcus Reed", assignedDriverId: "DRV-004", vehicleModel: "Mercedes Sprinter", status: "En route", area: "King St W", eta: "4 min" },
+  { id: "MT-AMB-06", driver: "Nina Patel", assignedDriverId: "DRV-009", vehicleModel: "Ford Transit 350", status: "Available", area: "Athletics Field", eta: "—" },
+  { id: "MT-AMB-07", driver: "Lucas Young", assignedDriverId: "DRV-010", vehicleModel: "Ram ProMaster", status: "Maintenance", area: "Operations Bay", eta: "—" },
+  { id: "MT-AMB-08", driver: "Ava Thompson", assignedDriverId: "DRV-005", vehicleModel: "Ford Transit 350", status: "Available", area: "Library", eta: "—" },
+  { id: "MT-AMB-09", driver: "Ethan Clark", assignedDriverId: "DRV-011", vehicleModel: "Mercedes Sprinter", status: "Available", area: "East Campus", eta: "—" },
+  { id: "MT-AMB-10", driver: "Grace Chen", assignedDriverId: "DRV-012", vehicleModel: "Ford Transit 350", status: "Available", area: "Student Centre", eta: "—" },
+  { id: "MT-AMB-11", driver: "Noah Brooks", assignedDriverId: "DRV-006", vehicleModel: "Ram ProMaster", status: "En route", area: "Science Hall", eta: "7 min" },
+  { id: "MT-AMB-12", driver: "Maya Singh", assignedDriverId: "DRV-007", vehicleModel: "Mercedes Sprinter", status: "On call", area: "North Gate", eta: "8 min" },
+];
+
+export const ADMIN_DRIVERS = [
+  { id: "DRV-001", name: "Daniel Ross", ambulance: "MT-AMB-01", contact: "+1 (202) 555-0111", licenseNumber: "DEMO-DL-001", shift: "07:00–15:00", status: "Available" },
+  { id: "DRV-002", name: "Priya Shah", ambulance: "MT-AMB-02", contact: "+1 (202) 555-0112", licenseNumber: "DEMO-DL-002", shift: "07:00–15:00", status: "On call" },
+  { id: "DRV-003", name: "Oliver King", ambulance: "MT-AMB-03", contact: "+1 (202) 555-0113", licenseNumber: "DEMO-DL-003", shift: "07:00–15:00", status: "Available" },
+  { id: "DRV-004", name: "Marcus Reed", ambulance: "MT-AMB-05", contact: "+1 (202) 555-0114", licenseNumber: "DEMO-DL-004", shift: "15:00–23:00", status: "En route" },
+  { id: "DRV-005", name: "Ava Thompson", ambulance: "MT-AMB-08", contact: "+1 (202) 555-0115", licenseNumber: "DEMO-DL-005", shift: "15:00–23:00", status: "Available" },
+  { id: "DRV-006", name: "Noah Brooks", ambulance: "MT-AMB-11", contact: "+1 (202) 555-0116", licenseNumber: "DEMO-DL-006", shift: "23:00–07:00", status: "En route" },
+  { id: "DRV-007", name: "Maya Singh", ambulance: "MT-AMB-12", contact: "+1 (202) 555-0117", licenseNumber: "DEMO-DL-007", shift: "23:00–07:00", status: "On call" },
+  { id: "DRV-008", name: "Ella Morris", ambulance: "MT-AMB-04", contact: "+1 (202) 555-0118", licenseNumber: "DEMO-DL-008", shift: "07:00–15:00", status: "Available" },
+  { id: "DRV-009", name: "Nina Patel", ambulance: "MT-AMB-06", contact: "+1 (202) 555-0119", licenseNumber: "DEMO-DL-009", shift: "15:00–23:00", status: "Available" },
+  { id: "DRV-010", name: "Lucas Young", ambulance: "MT-AMB-07", contact: "+1 (202) 555-0120", licenseNumber: "DEMO-DL-010", shift: "23:00–07:00", status: "Unavailable" },
+  { id: "DRV-011", name: "Ethan Clark", ambulance: "MT-AMB-09", contact: "+1 (202) 555-0128", licenseNumber: "DEMO-DL-011", shift: "07:00–15:00", status: "Available" },
+  { id: "DRV-012", name: "Grace Chen", ambulance: "MT-AMB-10", contact: "+1 (202) 555-0129", licenseNumber: "DEMO-DL-012", shift: "15:00–23:00", status: "Available" },
+];
+
+export const ADMIN_STUDENTS = [
+  { name: "Ava Morgan", id: "STU-2024-0186", contactNumber: "+1 (202) 555-0148", campus: "North Campus", requests: 3, lastSeen: "Today, 11:24 AM" },
+  { name: "Jordan Lee", id: "STU-2024-0214", contactNumber: "+1 (202) 555-0121", campus: "North Campus", requests: 3, lastSeen: "Today, 11:22 AM" },
+  { name: "Mia Chen", id: "STU-2023-0098", contactNumber: "+1 (202) 555-0122", campus: "West Campus", requests: 2, lastSeen: "Today, 11:18 AM" },
+  { name: "Noah Patel", id: "STU-2025-0331", contactNumber: "+1 (202) 555-0123", campus: "North Campus", requests: 1, lastSeen: "Today, 11:12 AM" },
+  { name: "Sofia Martin", id: "STU-2022-0157", contactNumber: "+1 (202) 555-0124", campus: "South Campus", requests: 4, lastSeen: "Today, 10:54 AM" },
+  { name: "Ethan Brooks", id: "STU-2024-0042", contactNumber: "+1 (202) 555-0125", campus: "North Campus", requests: 2, lastSeen: "Today, 10:48 AM" },
+  { name: "Amara Wilson", id: "STU-2023-0276", contactNumber: "+1 (202) 555-0126", campus: "West Campus", requests: 1, lastSeen: "Today, 10:40 AM" },
+  { name: "Liam Garcia", id: "STU-2024-0117", contactNumber: "+1 (202) 555-0127", campus: "South Campus", requests: 1, lastSeen: "Today, 10:35 AM" },
+];
+
+export const DAILY_EMERGENCY_DATA = [
+  { time: "06:00", requests: 2 },
+  { time: "08:00", requests: 5 },
+  { time: "10:00", requests: 8 },
+  { time: "12:00", requests: 6 },
+  { time: "14:00", requests: 9 },
+  { time: "16:00", requests: 7 },
+  { time: "18:00", requests: 4 },
+  { time: "20:00", requests: 3 },
+];
+
+export const WEEKLY_EMERGENCY_DATA = [
+  { day: "Mon", requests: 18 },
+  { day: "Tue", requests: 22 },
+  { day: "Wed", requests: 17 },
+  { day: "Thu", requests: 25 },
+  { day: "Fri", requests: 29 },
+  { day: "Sat", requests: 21 },
+  { day: "Sun", requests: 16 },
+];
+
+export const ACTIVE_AMBULANCE_LOCATIONS = [
+  { id: "MT-AMB-02", driver: "Priya Shah", status: "On call", position: [43.6605, -79.3821] },
+  { id: "MT-AMB-05", driver: "Marcus Reed", status: "En route", position: [43.6489, -79.3912] },
+  { id: "MT-AMB-11", driver: "Noah Brooks", status: "En route", position: [43.6554, -79.3694] },
+  { id: "MT-AMB-12", driver: "Maya Singh", status: "On call", position: [43.6562, -79.3877] },
+];
