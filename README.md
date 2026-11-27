@@ -4,7 +4,7 @@ JeevanSetu is a responsive frontend demonstration for coordinating emergency req
 
 ## Live Demo
 
-Deployment is pending. The live Render URL will be added here after the first deployment is verified.
+[Open the JeevanSetu live demo](https://jeevansetu-m02o.onrender.com).
 
 ## Demo Login Credentials
 
@@ -34,7 +34,7 @@ npm run build
 
 ## Deployment
 
-This repository includes a Render Blueprint (`render.yaml`) configured to build the Vite app and publish `dist/`, with an SPA rewrite for client-side routes. Connect the repository to Render as a Static Site to deploy.
+The live app is hosted on Render at [jeevansetu-m02o.onrender.com](https://jeevansetu-m02o.onrender.com). The Static Site uses an SPA rewrite from `/*` to `/index.html` so React Router routes load directly. The same rewrite is included in `render.yaml` for Blueprint-based deployments.
 
 ## Technology
 
