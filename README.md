@@ -6,6 +6,16 @@ JeevanSetu is a responsive web application concept for coordinating student emer
 
 This repository contains a frontend-only demonstration. It uses mock data and browser `localStorage`; it does not connect to a backend, provide live GPS tracking, or dispatch real emergency services.
 
+## Institutional Branding & Credits
+
+| Placement | Content |
+| --- | --- |
+| Header | ABESEC Ghaziabad |
+| Footer attribution | Developed & Maintained By: Himanshu Chaubey and Harsh Nagayach |
+| Department | CSE, Section-11 |
+| Team | Full Stack Development Team |
+| Footer copyright | © 2026 ABESEC Ghaziabad. All Rights Reserved. |
+
 ## Key Features
 
 - Role-based demo login for Admin and Student users.
